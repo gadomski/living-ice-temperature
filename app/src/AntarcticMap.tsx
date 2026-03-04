@@ -15,9 +15,36 @@ const EPSG3031 = new L.Proj.CRS(
   },
 );
 
-function AntarcticMap({ boreholes }: { boreholes: BoreholeFeature[] }) {
+const DEFAULT_STYLE = {
+  radius: 6,
+  fillColor: "#e53e3e",
+  color: "#fff",
+  weight: 1,
+  fillOpacity: 0.8,
+};
+
+const HOVER_STYLE = {
+  radius: 10,
+  fillColor: "#ecc94b",
+  color: "#fff",
+  weight: 2,
+  fillOpacity: 1,
+};
+
+interface AntarcticMapProps {
+  boreholes: BoreholeFeature[];
+  hoveredBorehole: string | null;
+  onHoverBorehole: (name: string | null) => void;
+}
+
+function AntarcticMap({
+  boreholes,
+  hoveredBorehole,
+  onHoverBorehole,
+}: AntarcticMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
+  const markersRef = useRef<Map<string, L.CircleMarker>>(new Map());
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -70,37 +97,43 @@ function AntarcticMap({ boreholes }: { boreholes: BoreholeFeature[] }) {
     const map = mapRef.current;
     if (!map || boreholes.length === 0) return;
 
+    markersRef.current.clear();
+
     const layer = L.geoJSON(boreholes, {
       pane: "boreholes",
-      pointToLayer: (_feature, latlng) =>
-        L.circleMarker(latlng, {
+      pointToLayer: (feature, latlng) => {
+        const marker = L.circleMarker(latlng, {
           pane: "boreholes",
-          radius: 6,
-          fillColor: "#e53e3e",
-          color: "#fff",
-          weight: 1,
-          fillOpacity: 0.8,
-        }),
+          ...DEFAULT_STYLE,
+        });
+        markersRef.current.set(feature.properties.name, marker);
+        return marker;
+      },
       onEachFeature: (feature, layer) => {
         const p = feature.properties;
-        const years =
-          p.start_year && p.end_year
-            ? `${p.start_year}–${p.end_year}`
-            : "Unknown";
-        layer.bindPopup(
-          `<strong>${p.name}</strong><br/>` +
-            `${p.location}<br/>` +
-            `Region: ${p.region}<br/>` +
-            `Years: ${years}<br/>` +
-            `Ice thickness: ${p.ice_thickness ? `${p.ice_thickness} m` : "N/A"}`,
-        );
+        layer.on("mouseover", () => onHoverBorehole(p.name));
+        layer.on("mouseout", () => onHoverBorehole(null));
       },
     }).addTo(map);
 
     return () => {
       layer.remove();
+      markersRef.current.clear();
     };
-  }, [boreholes]);
+  }, [boreholes, onHoverBorehole]);
+
+  useEffect(() => {
+    markersRef.current.forEach((marker, name) => {
+      if (name === hoveredBorehole) {
+        marker.setStyle(HOVER_STYLE);
+        marker.setRadius(HOVER_STYLE.radius);
+        marker.bringToFront();
+      } else {
+        marker.setStyle(DEFAULT_STYLE);
+        marker.setRadius(DEFAULT_STYLE.radius);
+      }
+    });
+  }, [hoveredBorehole]);
 
   return <Box ref={containerRef} h="100%" w="100%" />;
 }

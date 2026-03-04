@@ -1,34 +1,68 @@
-import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { useEffect, useRef } from "react";
+import { Card, Heading, Stack, Text } from "@chakra-ui/react";
 import type { BoreholeFeature } from "./Borehole";
 
 interface SidebarProps {
   boreholes: BoreholeFeature[];
+  hoveredBorehole: string | null;
+  onHoverBorehole: (name: string | null) => void;
 }
 
-export default function Sidebar({ boreholes }: SidebarProps) {
+export default function Sidebar({
+  boreholes,
+  hoveredBorehole,
+  onHoverBorehole,
+}: SidebarProps) {
+  const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+
+  useEffect(() => {
+    if (hoveredBorehole) {
+      const el = itemRefs.current.get(hoveredBorehole);
+      el?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }
+  }, [hoveredBorehole]);
+
   return (
-    <Stack h="100%" gap={4}>
+    <Stack h="100%" gap={4} p={4}>
       <Heading>Living Ice Temperature</Heading>
       <Stack overflowY="auto" gap={3}>
-        {boreholes.map((feature) => (
-          <Box
-            key={feature.properties.name}
-            p={3}
-            borderWidth="1px"
-            borderRadius="md"
-          >
-            <Text fontWeight="bold">{feature.properties.name}</Text>
-            <Text fontSize="sm" color="gray.600">
-              {feature.properties.location}
-            </Text>
-            <Text fontSize="xs" color="gray.500">
-              {feature.properties.region} &middot;{" "}
-              {feature.properties.start_year === feature.properties.end_year
-                ? feature.properties.start_year
-                : `${feature.properties.start_year}–${feature.properties.end_year}`}
-            </Text>
-          </Box>
-        ))}
+        {boreholes.map((feature) => {
+          const name = feature.properties.name;
+          const isHovered = hoveredBorehole === name;
+          return (
+            <Card.Root
+              key={name}
+              ref={(el: HTMLDivElement | null) => {
+                if (el) {
+                  itemRefs.current.set(name, el);
+                } else {
+                  itemRefs.current.delete(name);
+                }
+              }}
+              variant={"outline"}
+              mr={3}
+              size={"sm"}
+              cursor={"pointer"}
+              borderColor={isHovered ? "red.400" : undefined}
+              bg={isHovered ? "red.50" : undefined}
+              onMouseEnter={() => onHoverBorehole(name)}
+              onMouseLeave={() => onHoverBorehole(null)}
+            >
+              <Card.Body>
+                <Card.Title>{name}</Card.Title>
+                <Card.Description>
+                  {feature.properties.location}
+                </Card.Description>
+              </Card.Body>
+              <Card.Footer fontSize={"sm"}>
+                {feature.properties.region} &middot;{" "}
+                {feature.properties.start_year === feature.properties.end_year
+                  ? feature.properties.start_year
+                  : `${feature.properties.start_year}–${feature.properties.end_year}`}
+              </Card.Footer>
+            </Card.Root>
+          );
+        })}
       </Stack>
     </Stack>
   );

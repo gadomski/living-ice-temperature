@@ -6,6 +6,7 @@ import type { BoreholeCollection, BoreholeFeature } from "./Borehole";
 
 export default function App() {
   const [boreholes, setBoreholes] = useState<BoreholeFeature[]>([]);
+  const [hoveredBorehole, setHoveredBorehole] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/boreholes.json")
@@ -15,11 +16,23 @@ export default function App() {
 
   return (
     <SimpleGrid h="100vh" w="100vw" columns={3}>
-      <GridItem colSpan={1} p={4} boxShadow="4px 0 6px -2px rgba(0, 0, 0, 0.1)">
-        <Sidebar boreholes={boreholes} />
+      <GridItem
+        colSpan={1}
+        boxShadow="4px 0 6px -2px rgba(0, 0, 0, 0.1)"
+        overflow={"scroll"}
+      >
+        <Sidebar
+          boreholes={boreholes}
+          hoveredBorehole={hoveredBorehole}
+          onHoverBorehole={setHoveredBorehole}
+        />
       </GridItem>
       <GridItem colSpan={2}>
-        <AntarcticMap boreholes={boreholes} />
+        <AntarcticMap
+          boreholes={boreholes}
+          hoveredBorehole={hoveredBorehole}
+          onHoverBorehole={setHoveredBorehole}
+        />
       </GridItem>
     </SimpleGrid>
   );
