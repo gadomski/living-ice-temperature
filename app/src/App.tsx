@@ -1,5 +1,6 @@
-import { GridItem, SimpleGrid } from "@chakra-ui/react";
+import { Flex, GridItem, Heading, SimpleGrid } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import AboutDialog from "./AboutDialog";
 import AntarcticMap from "./AntarcticMap";
 import type { BoreholeCollection, BoreholeFeature } from "./Borehole";
 import BoreholeDialog from "./BoreholeDialog";
@@ -18,8 +19,20 @@ export default function App() {
   }, []);
 
   return (
-    <>
-      <SimpleGrid h="100vh" w="100vw" columns={3}>
+    <Flex direction="column" h="100vh" w="100vw">
+      <Flex
+        as="header"
+        align="center"
+        justify="space-between"
+        px={6}
+        py={3}
+        boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
+        flexShrink={0}
+      >
+        <Heading size="lg">Living Ice Temperature</Heading>
+        <AboutDialog />
+      </Flex>
+      <SimpleGrid flex="1" overflow="hidden" columns={3}>
         <GridItem
           colSpan={1}
           boxShadow="4px 0 6px -2px rgba(0, 0, 0, 0.1)"
@@ -45,6 +58,6 @@ export default function App() {
         borehole={selectedBorehole}
         onClose={() => setSelectedBorehole(null)}
       />
-    </>
+    </Flex>
   );
 }
