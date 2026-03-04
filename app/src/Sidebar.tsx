@@ -25,7 +25,7 @@ export default function Sidebar({
   return (
     <Stack h="100%" gap={4} p={4}>
       <Heading>Living Ice Temperature</Heading>
-      <Stack overflowY="auto" gap={3}>
+      <Stack overflowY="auto">
         {boreholes.map((feature) => {
           const name = feature.properties.name;
           const isHovered = hoveredBorehole === name;
@@ -40,7 +40,7 @@ export default function Sidebar({
                 }
               }}
               variant={"outline"}
-              mr={3}
+              mr={4}
               size={"sm"}
               cursor={"pointer"}
               borderColor={isHovered ? "red.400" : undefined}
