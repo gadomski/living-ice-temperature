@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "proj4leaflet";
+import { BoreholeFeature } from "./Borehole";
 
 const EPSG3031 = new L.Proj.CRS(
   "EPSG:3031",
@@ -14,14 +15,12 @@ const EPSG3031 = new L.Proj.CRS(
   },
 );
 
-function AntarcticMap() {
+function AntarcticMap({ boreholes }: { boreholes: BoreholeFeature[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
-
-    let removed = false;
 
     const map = L.map(containerRef.current, {
       crs: EPSG3031,
@@ -32,13 +31,14 @@ function AntarcticMap() {
       attributionControl: true,
     });
 
+    map.createPane("boreholes").style.zIndex = "650";
+
     fetch("/quantartica-simple-basemap.json")
       .then((res) => res.json())
       .then((geojson) => {
-        if (removed) return;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         new (L.Proj as any).GeoJSON(geojson, {
-          attribution: "Norwegian Polar Institute's Quantarctica package.",
+          attribution: "Norwegian Polar Institute's Quantarctica package",
           style: (feature?: GeoJSON.Feature) => {
             const category = feature?.properties?.Category ?? "";
             let fillColor = "#dedcd2";
@@ -56,45 +56,51 @@ function AntarcticMap() {
             };
           },
         }).addTo(map);
-        return fetch("/boreholes.json");
-      })
-      .then((res) => res?.json())
-      .then((geojson) => {
-        if (removed || !geojson) return;
-        L.geoJSON(geojson, {
-          pointToLayer: (_feature, latlng) =>
-            L.circleMarker(latlng, {
-              radius: 6,
-              fillColor: "#e53e3e",
-              color: "#fff",
-              weight: 1,
-              fillOpacity: 0.8,
-            }),
-          onEachFeature: (feature, layer) => {
-            const p = feature.properties;
-            const years =
-              p.start_year && p.end_year
-                ? `${p.start_year}–${p.end_year}`
-                : "Unknown";
-            layer.bindPopup(
-              `<strong>${p.name}</strong><br/>` +
-                `${p.location}<br/>` +
-                `Region: ${p.region}<br/>` +
-                `Years: ${years}<br/>` +
-                `Ice thickness: ${p.ice_thickness ? `${p.ice_thickness} m` : "N/A"}`,
-            );
-          },
-        }).addTo(map);
       });
 
     mapRef.current = map;
 
     return () => {
-      removed = true;
       map.remove();
       mapRef.current = null;
     };
   }, []);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || boreholes.length === 0) return;
+
+    const layer = L.geoJSON(boreholes, {
+      pane: "boreholes",
+      pointToLayer: (_feature, latlng) =>
+        L.circleMarker(latlng, {
+          pane: "boreholes",
+          radius: 6,
+          fillColor: "#e53e3e",
+          color: "#fff",
+          weight: 1,
+          fillOpacity: 0.8,
+        }),
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        const years =
+          p.start_year && p.end_year
+            ? `${p.start_year}–${p.end_year}`
+            : "Unknown";
+        layer.bindPopup(
+          `<strong>${p.name}</strong><br/>` +
+            `${p.location}<br/>` +
+            `Region: ${p.region}<br/>` +
+            `Years: ${years}<br/>` +
+            `Ice thickness: ${p.ice_thickness ? `${p.ice_thickness} m` : "N/A"}`,
+        );
+      },
+    }).addTo(map);
+
+    return () => {
+      layer.remove();
+    };
+  }, [boreholes]);
 
   return <Box ref={containerRef} h="100%" w="100%" />;
 }
