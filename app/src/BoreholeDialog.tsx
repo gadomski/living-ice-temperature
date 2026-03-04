@@ -1,15 +1,13 @@
 import {
-  Badge,
   CloseButton,
   DataList,
   Dialog,
   HStack,
   Link,
   Portal,
-  Stack,
-  Text,
 } from "@chakra-ui/react";
 import type { BoreholeFeature } from "./Borehole";
+import DepthChart from "./DepthChart";
 
 interface BoreholeDialogProps {
   borehole: BoreholeFeature | null;
@@ -74,6 +72,23 @@ export default function BoreholeDialog({
                   </DataList.ItemValue>
                 </DataList.Item>
               </DataList.Root>
+              <HStack flexWrap="wrap" gap={4} mt={4}>
+                {p?.temperature_path && (
+                  <DepthChart
+                    path={p.temperature_path}
+                    title="Temperature"
+                  />
+                )}
+                {p?.grain_size_path && (
+                  <DepthChart
+                    path={p.grain_size_path}
+                    title="Grain Size"
+                  />
+                )}
+                {p?.imp_path && (
+                  <DepthChart path={p.imp_path} title="Impurity" />
+                )}
+              </HStack>
             </Dialog.Body>
             <Dialog.CloseTrigger asChild>
               <CloseButton size={"sm"} />

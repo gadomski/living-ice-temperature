@@ -12,6 +12,9 @@ export interface BoreholeProperties {
   conductivity: boolean;
   grain_size: boolean;
   original_publication: string;
+  temperature_path: string | null;
+  grain_size_path: string | null;
+  imp_path: string | null;
 }
 
 export interface BoreholeFeature {
