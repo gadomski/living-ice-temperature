@@ -1,10 +1,4 @@
-import {
-  CloseButton,
-  Dialog,
-  Link,
-  Portal,
-  Text,
-} from "@chakra-ui/react";
+import { CloseButton, Dialog, Link, Portal, Text } from "@chakra-ui/react";
 
 export default function AboutDialog() {
   return (
@@ -39,8 +33,8 @@ export default function AboutDialog() {
                   Development Seed
                 </Link>{" "}
                 in collaboration with researchers studying ice sheet dynamics.
-                The data presented here is drawn from peer-reviewed
-                publications and publicly available datasets.
+                The data presented here is drawn from peer-reviewed publications
+                and publicly available datasets.
               </Text>
               <Text>
                 The source code is available on{" "}
