@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
 import { Card, Heading, Stack } from "@chakra-ui/react";
+import { useEffect, useRef } from "react";
 import type { BoreholeFeature } from "./Borehole";
 
 interface SidebarProps {

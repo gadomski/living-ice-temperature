@@ -17,7 +17,10 @@ declare module "leaflet" {
       scale(zoom: number): number;
       zoom(scale: number): number;
       getProjectedBounds(zoom: number): L.Bounds;
-      distance(latlng1: L.LatLngExpression, latlng2: L.LatLngExpression): number;
+      distance(
+        latlng1: L.LatLngExpression,
+        latlng2: L.LatLngExpression,
+      ): number;
       wrapLatLng(latlng: L.LatLng): L.LatLng;
       wrapLatLngBounds(bounds: L.LatLngBounds): L.LatLngBounds;
     }

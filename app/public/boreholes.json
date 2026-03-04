@@ -5,10 +5,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -140.0053,
-          -81.0736
-        ]
+        "coordinates": [-140.0053, -81.0736]
       },
       "properties": {
         "name": "BIS9845",
@@ -29,10 +26,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -119.5167,
-          -80.0167
-        ]
+        "coordinates": [-119.5167, -80.0167]
       },
       "properties": {
         "name": "Byrd",
@@ -53,10 +47,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -172.9475,
-          -83.0394
-        ]
+        "coordinates": [-172.9475, -83.0394]
       },
       "properties": {
         "name": "CIRD",
@@ -77,10 +68,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          123.4,
-          -75.1
-        ]
+        "coordinates": [123.4, -75.1]
       },
       "properties": {
         "name": "DomeC",
@@ -101,10 +89,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          39.6667,
-          -77.3167
-        ]
+        "coordinates": [39.6667, -77.3167]
       },
       "properties": {
         "name": "DomeF",
@@ -125,10 +110,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -135.8253,
-          -82.6767
-        ]
+        "coordinates": [-135.8253, -82.6767]
       },
       "properties": {
         "name": "ER9612",
@@ -149,10 +131,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -136.4,
-          -82.3667
-        ]
+        "coordinates": [-136.4, -82.3667]
       },
       "properties": {
         "name": "KIS0012",
@@ -173,10 +152,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -136.4022,
-          -82.4325
-        ]
+        "coordinates": [-136.4022, -82.4325]
       },
       "properties": {
         "name": "KIS006",
@@ -197,10 +173,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -136.4044,
-          -82.3997
-        ]
+        "coordinates": [-136.4044, -82.3997]
       },
       "properties": {
         "name": "KIS009",
@@ -221,10 +194,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -135.9767,
-          -82.445
-        ]
+        "coordinates": [-135.9767, -82.445]
       },
       "properties": {
         "name": "KIS962",
@@ -245,10 +215,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          0.0,
-          -75.0
-        ]
+        "coordinates": [0.0, -75.0]
       },
       "properties": {
         "name": "Kohnen",
@@ -269,10 +236,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          112.8,
-          -66.7667
-        ]
+        "coordinates": [112.8, -66.7667]
       },
       "properties": {
         "name": "LawDome",
@@ -293,10 +257,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -148.8083,
-          -81.6583
-        ]
+        "coordinates": [-148.8083, -81.6583]
       },
       "properties": {
         "name": "SipleDome",
@@ -317,10 +278,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          158.0,
-          -77.666667
-        ]
+        "coordinates": [158.0, -77.666667]
       },
       "properties": {
         "name": "TaylorDome",
@@ -341,10 +299,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -138.1458,
-          -83.5794
-        ]
+        "coordinates": [-138.1458, -83.5794]
       },
       "properties": {
         "name": "UC9311",
@@ -365,10 +320,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -138.3717,
-          -83.6792
-        ]
+        "coordinates": [-138.3717, -83.6792]
       },
       "properties": {
         "name": "UC9314",
@@ -389,10 +341,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -138.0419,
-          -83.6108
-        ]
+        "coordinates": [-138.0419, -83.6108]
       },
       "properties": {
         "name": "UC9316",
@@ -413,10 +362,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -138.1494,
-          -83.5733
-        ]
+        "coordinates": [-138.1494, -83.5733]
       },
       "properties": {
         "name": "UC939",
@@ -437,10 +383,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          106.8,
-          -78.4667
-        ]
+        "coordinates": [106.8, -78.4667]
       },
       "properties": {
         "name": "Vostok",
@@ -461,10 +404,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -112.0865,
-          -79.4676
-        ]
+        "coordinates": [-112.0865, -79.4676]
       },
       "properties": {
         "name": "WAISDivide",
@@ -485,10 +425,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -138.4239,
-          -83.4994
-        ]
+        "coordinates": [-138.4239, -83.4994]
       },
       "properties": {
         "name": "WIS881",
@@ -509,10 +446,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -138.4267,
-          -83.4833
-        ]
+        "coordinates": [-138.4267, -83.4833]
       },
       "properties": {
         "name": "WIS911",
@@ -533,10 +467,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -138.4581,
-          -83.4847
-        ]
+        "coordinates": [-138.4581, -83.4847]
       },
       "properties": {
         "name": "WIS9226",
@@ -557,10 +488,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          -138.9464,
-          -83.4619
-        ]
+        "coordinates": [-138.9464, -83.4619]
       },
       "properties": {
         "name": "WIS9547",

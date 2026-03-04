@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
 import { Box, Spinner, Text } from "@chakra-ui/react";
 import * as d3 from "d3";
+import { useEffect, useRef, useState } from "react";
 
 interface DepthChartProps {
   path: string;

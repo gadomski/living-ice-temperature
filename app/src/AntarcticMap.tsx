@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
 import { Box } from "@chakra-ui/react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "proj4leaflet";
+import { useEffect, useRef } from "react";
 import { BoreholeFeature } from "./Borehole";
 
 const EPSG3031 = new L.Proj.CRS(

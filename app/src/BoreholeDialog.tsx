@@ -74,16 +74,10 @@ export default function BoreholeDialog({
               </DataList.Root>
               <HStack flexWrap="wrap" gap={4} mt={4}>
                 {p?.temperature_path && (
-                  <DepthChart
-                    path={p.temperature_path}
-                    title="Temperature"
-                  />
+                  <DepthChart path={p.temperature_path} title="Temperature" />
                 )}
                 {p?.grain_size_path && (
-                  <DepthChart
-                    path={p.grain_size_path}
-                    title="Grain Size"
-                  />
+                  <DepthChart path={p.grain_size_path} title="Grain Size" />
                 )}
                 {p?.imp_path && (
                   <DepthChart path={p.imp_path} title="Impurity" />
