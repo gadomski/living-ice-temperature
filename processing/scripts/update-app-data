@@ -3,3 +3,7 @@
 set -e
 
 uv run living-ice-temperature boreholes data/BoreholeLocations.csv > ../app/public/boreholes.json
+
+for dir in data/*/; do
+    cp -r "$dir" "../app/public/$(basename "$dir")/"
+done

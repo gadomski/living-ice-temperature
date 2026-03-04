@@ -2,11 +2,11 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
-from typing import Annotated, Any, Literal
+from typing import Any, Literal
 
 from geojson_pydantic import Feature, FeatureCollection, Point
 from geojson_pydantic.types import Position2D
-from pydantic import BaseModel, BeforeValidator, model_validator
+from pydantic import BaseModel, model_validator
 
 
 def parse_bool(value: Any) -> bool:
@@ -27,11 +27,10 @@ class Borehole(BaseModel):
     lon: float
     ice_thickness: float
     drilled_depth: float
-    temperature: bool
-    chemistry: Annotated[bool, BeforeValidator(parse_bool)]
-    conductivity: Annotated[bool, BeforeValidator(parse_bool)]
-    grain_size: Annotated[bool, BeforeValidator(parse_bool)]
     original_publication: str
+    temperature_path: str | None = None
+    grain_size_path: str | None = None
+    imp_path: str | None = None
 
     @model_validator(mode="before")
     @classmethod
@@ -87,7 +86,9 @@ class Borehole(BaseModel):
             next(reader)  # discard headers
             for row in reader:
                 if row["name"]:
-                    boreholes.append(Borehole.model_validate(row))
+                    borehole = Borehole.model_validate(row)
+                    borehole.update_csv_paths(path.parent)
+                    boreholes.append(borehole)
         return boreholes
 
     @classmethod
@@ -106,3 +107,18 @@ class Borehole(BaseModel):
 
     def to_point(self) -> Point:
         return Point(type="Point", coordinates=Position2D(self.lon, self.lat))
+
+    def update_csv_paths(self, directory: Path) -> None:
+        for path in directory.glob("**/*.csv"):
+            relative_path = str(path.relative_to(directory))
+            parts = path.stem.split("_")
+            if parts[0].lower() == self.name.lower():
+                match parts[1]:
+                    case "temp":
+                        self.temperature_path = relative_path
+                    case "grainsize":
+                        self.grain_size_path = relative_path
+                    case "imp":
+                        self.imp_path = relative_path
+                    case _:
+                        raise NotImplementedError(parts[1])

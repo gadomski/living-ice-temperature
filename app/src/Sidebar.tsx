@@ -1,17 +1,19 @@
 import { useEffect, useRef } from "react";
-import { Card, Heading, Stack, Text } from "@chakra-ui/react";
+import { Card, Heading, Stack } from "@chakra-ui/react";
 import type { BoreholeFeature } from "./Borehole";
 
 interface SidebarProps {
   boreholes: BoreholeFeature[];
   hoveredBorehole: string | null;
   onHoverBorehole: (name: string | null) => void;
+  onSelectBorehole: (borehole: BoreholeFeature) => void;
 }
 
 export default function Sidebar({
   boreholes,
   hoveredBorehole,
   onHoverBorehole,
+  onSelectBorehole,
 }: SidebarProps) {
   const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
@@ -45,6 +47,7 @@ export default function Sidebar({
               cursor={"pointer"}
               borderColor={isHovered ? "red.400" : undefined}
               bg={isHovered ? "red.50" : undefined}
+              onClick={() => onSelectBorehole(feature)}
               onMouseEnter={() => onHoverBorehole(name)}
               onMouseLeave={() => onHoverBorehole(null)}
             >

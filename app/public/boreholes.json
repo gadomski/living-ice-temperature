@@ -19,11 +19,10 @@
         "type": "Borehole",
         "ice_thickness": 1086.0,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "BindschadlerIceStream/BIS9845_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -44,11 +43,10 @@
         "type": "Borehole",
         "ice_thickness": 2300.0,
         "drilled_depth": 1530.0,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/byrd-station-drilling-196669/3A5AB888B8D7F9032F0C435D43D16A51"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/byrd-station-drilling-196669/3A5AB888B8D7F9032F0C435D43D16A51",
+        "temperature_path": "Byrd/byrd_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -69,11 +67,10 @@
         "type": "Borehole",
         "ice_thickness": 480.0,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/age-of-crary-ice-rise-antarctica-determined-from-temperaturedepth-profiles/C50D6867D25016F78712EADAA18F94A9"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/age-of-crary-ice-rise-antarctica-determined-from-temperaturedepth-profiles/C50D6867D25016F78712EADAA18F94A9",
+        "temperature_path": "CraryIceRise/CIRD_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -94,11 +91,10 @@
         "type": "Borehole",
         "ice_thickness": 3273.0,
         "drilled_depth": 3233.0,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": true,
-        "grain_size": true,
-        "original_publication": "https://www.nature.com/articles/nature02599#Sec10"
+        "original_publication": "https://www.nature.com/articles/nature02599#Sec10",
+        "temperature_path": "DomeC/domec_temp.csv",
+        "grain_size_path": "DomeC/domec_grainsize.csv",
+        "imp_path": "DomeC/domec_imp.csv"
       }
     },
     {
@@ -119,11 +115,10 @@
         "type": "Borehole",
         "ice_thickness": 3028.0,
         "drilled_depth": 3810.0,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://tc.copernicus.org/articles/14/4021/2020/"
+        "original_publication": "https://tc.copernicus.org/articles/14/4021/2020/",
+        "temperature_path": "DomeF/domef_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -144,11 +139,10 @@
         "type": "Borehole",
         "ice_thickness": 1123.9,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "EngelhardtIceRidge/ER9612_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -169,11 +163,10 @@
         "type": "Borehole",
         "ice_thickness": 949.4,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "KambIceStream/KIS0012_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -194,11 +187,10 @@
         "type": "Borehole",
         "ice_thickness": 1191.8,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "KambIceStream/KIS006_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -219,11 +211,10 @@
         "type": "Borehole",
         "ice_thickness": 1033.5,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "KambIceStream/KIS009_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -244,11 +235,10 @@
         "type": "Borehole",
         "ice_thickness": 1189.0,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "KambIceStream/KIS962_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -269,11 +259,10 @@
         "type": "Borehole",
         "ice_thickness": 2750.0,
         "drilled_depth": 2892.0,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://tc.copernicus.org/articles/14/4021/2020/"
+        "original_publication": "https://tc.copernicus.org/articles/14/4021/2020/",
+        "temperature_path": "Kohnen/kohnen_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -294,11 +283,10 @@
         "type": "Borehole",
         "ice_thickness": 1196.0,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/journal-of-glaciology/article/inferring-geothermal-heat-flux-from-an-iceborehole-temperature-profile-at-law-dome-east-antarctica/766F206C214CCA9DEB7C205D679FCB31"
+        "original_publication": "https://www.cambridge.org/core/journals/journal-of-glaciology/article/inferring-geothermal-heat-flux-from-an-iceborehole-temperature-profile-at-law-dome-east-antarctica/766F206C214CCA9DEB7C205D679FCB31",
+        "temperature_path": "LawDome/lawdome_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -319,11 +307,10 @@
         "type": "Borehole",
         "ice_thickness": 1004.6,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": true,
-        "conductivity": true,
-        "grain_size": true,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": null,
+        "grain_size_path": "SipleDome/sipledome_grainsize.csv",
+        "imp_path": null
       }
     },
     {
@@ -344,11 +331,10 @@
         "type": "Borehole",
         "ice_thickness": null,
         "drilled_depth": 554.99,
-        "temperature": true,
-        "chemistry": true,
-        "conductivity": true,
-        "grain_size": false,
-        "original_publication": "https://icecores.org/inventory/taylor-dome"
+        "original_publication": "https://icecores.org/inventory/taylor-dome",
+        "temperature_path": "TaylorDome/taylordome_temp.csv",
+        "grain_size_path": null,
+        "imp_path": "TaylorDome/taylordome_imp.csv"
       }
     },
     {
@@ -369,11 +355,10 @@
         "type": "Borehole",
         "ice_thickness": 910.6,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "Unicorn/UC9311_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -394,11 +379,10 @@
         "type": "Borehole",
         "ice_thickness": 1091.6,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "Unicorn/UC9314_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -419,11 +403,10 @@
         "type": "Borehole",
         "ice_thickness": 962.3,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "Unicorn/UC9316_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -444,11 +427,10 @@
         "type": "Borehole",
         "ice_thickness": 908.4,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "Unicorn/UC939_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -469,11 +451,10 @@
         "type": "Borehole",
         "ice_thickness": 3750.0,
         "drilled_depth": 3488.0,
-        "temperature": true,
-        "chemistry": true,
-        "conductivity": true,
-        "grain_size": false,
-        "original_publication": "https://www.sciencedirect.com/science/article/abs/pii/S0012821X09001629https://www.sciencedirect.com/science/article/abs/pii/S0012821X09001629"
+        "original_publication": "https://www.sciencedirect.com/science/article/abs/pii/S0012821X09001629https://www.sciencedirect.com/science/article/abs/pii/S0012821X09001629",
+        "temperature_path": "Vostok/vostok_temp.csv",
+        "grain_size_path": null,
+        "imp_path": "Vostok/vostok_imp.csv"
       }
     },
     {
@@ -494,11 +475,10 @@
         "type": "Borehole",
         "ice_thickness": 3455.0,
         "drilled_depth": 1766.0,
-        "temperature": true,
-        "chemistry": true,
-        "conductivity": true,
-        "grain_size": false,
-        "original_publication": "https://doi.org/10.7265/N5V69GJW"
+        "original_publication": "https://doi.org/10.7265/N5V69GJW",
+        "temperature_path": "WAISDivide/waisdivide_temp.csv",
+        "grain_size_path": null,
+        "imp_path": "WAISDivide/waisdivide_imp.csv"
       }
     },
     {
@@ -519,11 +499,10 @@
         "type": "Borehole",
         "ice_thickness": 1035.0,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "WhilliansIceStream/WIS881_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -544,11 +523,10 @@
         "type": "Borehole",
         "ice_thickness": 1055.0,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "WhilliansIceStream/WIS911_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -569,11 +547,10 @@
         "type": "Borehole",
         "ice_thickness": 1052.0,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "WhilliansIceStream/WIS9226_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     },
     {
@@ -594,11 +571,10 @@
         "type": "Borehole",
         "ice_thickness": 1026.3,
         "drilled_depth": null,
-        "temperature": true,
-        "chemistry": false,
-        "conductivity": false,
-        "grain_size": false,
-        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C"
+        "original_publication": "https://www.cambridge.org/core/journals/annals-of-glaciology/article/thermal-regime-and-dynamics-of-the-west-antarctic-ice-sheet/C4DE27B2686B52416C4A0CFB8021920C",
+        "temperature_path": "WhilliansIceStream/WIS9547_temp.csv",
+        "grain_size_path": null,
+        "imp_path": null
       }
     }
   ]

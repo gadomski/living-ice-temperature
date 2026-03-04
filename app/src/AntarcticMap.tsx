@@ -35,12 +35,14 @@ interface AntarcticMapProps {
   boreholes: BoreholeFeature[];
   hoveredBorehole: string | null;
   onHoverBorehole: (name: string | null) => void;
+  onSelectBorehole: (borehole: BoreholeFeature) => void;
 }
 
 function AntarcticMap({
   boreholes,
   hoveredBorehole,
   onHoverBorehole,
+  onSelectBorehole,
 }: AntarcticMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
@@ -113,6 +115,9 @@ function AntarcticMap({
         const p = feature.properties;
         layer.on("mouseover", () => onHoverBorehole(p.name));
         layer.on("mouseout", () => onHoverBorehole(null));
+        layer.on("click", () =>
+          onSelectBorehole(feature as unknown as BoreholeFeature),
+        );
       },
     }).addTo(map);
 
@@ -120,7 +125,7 @@ function AntarcticMap({
       layer.remove();
       markersRef.current.clear();
     };
-  }, [boreholes, onHoverBorehole]);
+  }, [boreholes, onHoverBorehole, onSelectBorehole]);
 
   useEffect(() => {
     markersRef.current.forEach((marker, name) => {
