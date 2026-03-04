@@ -12,7 +12,7 @@ export default function App() {
     useState<BoreholeFeature | null>(null);
 
   useEffect(() => {
-    fetch("/boreholes.json")
+    fetch(`${import.meta.env.BASE_URL}boreholes.json`)
       .then((res) => res.json())
       .then((data: BoreholeCollection) => setBoreholes(data.features));
   }, []);

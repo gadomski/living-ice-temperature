@@ -62,7 +62,7 @@ function AntarcticMap({
 
     map.createPane("boreholes").style.zIndex = "650";
 
-    fetch("/quantartica-simple-basemap.json")
+    fetch(`${import.meta.env.BASE_URL}quantartica-simple-basemap.json`)
       .then((res) => res.json())
       .then((geojson) => {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any

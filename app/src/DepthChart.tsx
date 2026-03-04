@@ -36,7 +36,7 @@ export default function DepthChart({ path, title }: DepthChartProps) {
   useEffect(() => {
     setData(null);
     setError(null);
-    d3.csv(`/${path}`)
+    d3.csv(`${import.meta.env.BASE_URL}${path}`)
       .then((rows) => setData(parseCsv(rows)))
       .catch(() => setError("Failed to load data"));
   }, [path]);
